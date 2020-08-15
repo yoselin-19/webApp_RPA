@@ -10,13 +10,13 @@
         <div class="card-body">
             <form action="/consulta" method="POST">
                 <div class="form-group">
-                    <input type="text" name="carne" class="form-control" placeholder="carne" autofocus>
+                    <input type="text" name="carne" class="form-control" placeholder="carne" value="{{ request.form['carne'] }}" autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="año" class="form-control" placeholder="año">
+                    <input type="text" name="año" class="form-control" placeholder="año" value="{{ request.form['año'] }}">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="semestre" class="form-control" placeholder="semestre">
+                    <input type="text" name="semestre" class="form-control" placeholder="semestre" value="{{ request.form['semestre'] }}">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">
@@ -24,7 +24,15 @@
                     </button>
                 </div>
             </form>
-            <div id="resultado_consulta"></div>
+            <div id="resultado_consulta" style="align=center">
+                {% if num %}
+                    <p>Grupo:</p>
+                    <h1>{{num[0]['grupo']}}</h1>
+                {%else%}
+                    <p></p>
+                    <h1></h1>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

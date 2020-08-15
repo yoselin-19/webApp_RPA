@@ -1,16 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} Welcome to WebApp {% endblock %}
 {% block content %}
-<!--    <h2>{{author}}</h2>-->
-<!--{%if sunny%}-->
-<!--<h2>Soleado</h2>-->
-<!--{%else%}-->
-<!--<H2>NO soleado</H2>-->
-<!--{%endif%}-->
 
-<!--{%for dato in lista%}-->
-<!--    <h3>{{dato.nombre}}</h3>-->
-<!--{%endfor%}-->
 <div class="jumbotron jumbotron-fluid">
   <div class="container text-center">
     <h2 class="display-4">Welcome to WebApp</h2>
@@ -18,26 +9,27 @@
   </div>
 </div>
 
-	<div id="contenedor">
-		<div id="contenido_modos">
-			<div class="card" onclick="window.location='{{ url_for('consulta')}}';">
-				<img src="{{ url_for('static', filename= 'img/student.jpg' ) }}">
-				<h3>Consultar</h3>
-				<p>Podra consulta si el estudiante ya tiene un grupo asignado.</p>
-			</div>
+<div id="contenedor">
+  <div id="contenido_modos">
+    <div class="card" onclick="window.location='{{ url_for('consulta')}}';">
+      <img src="{{ url_for('static', filename= 'img/student.jpg' ) }}">
+      <h3>Consultar</h3>
+      <p>Podra consulta si el estudiante ya tiene un grupo asignado.</p>
+    </div>
 
-			<div class="card" onclick="window.location='{{ url_for('insertar')}}';">
-				<img src="{{ url_for('static', filename= 'img/insert.jpg' ) }}">
-				<h3>Agregar</h3>
-				<p>Podra agregar un nuevo estudiante.</p>
-			</div>
+    <div class="card" onclick="window.location='{{ url_for('insertar')}}';">
+      <img src="{{ url_for('static', filename= 'img/insert.jpg' ) }}">
+      <h3>Agregar</h3>
+      <p>Podra agregar un nuevo estudiante.</p>
+    </div>
 
-			<div class="card" onclick="window.location='{{ url_for('grupo')}}';">
-				<img src="{{ url_for('static', filename= 'img/group.jpg' ) }}">
-				<h3>Grupo</h3>
-				<p>Podra consultar los estudiantes que estan en cierto grupo.</p>
-			</div>
+    <div class="card" onclick="window.location='{{ url_for('grupo')}}';">
+      <img src="{{ url_for('static', filename= 'img/group.jpg' ) }}">
+      <h3>Grupo</h3>
+      <p>Podra consultar los estudiantes que estan en cierto grupo.</p>
+    </div>
 
-		</div>
-	</div>
+  </div>
+</div>
+
 {% endblock %}

@@ -6,7 +6,7 @@ CREATE TABLE student (
     carne TEXT NOT NULL,
     dpi TEXT NOT NULL,
     correo TEXT NOT NULL,
-    semestre INTEGER NOT NULL,
-    año INTEGER NOT NULL,
-    grupo INTEGER NOT NULL
+    semestre TEXT NOT NULL,
+    año TEXT NOT NULL,
+    grupo TEXT NOT NULL
 );
