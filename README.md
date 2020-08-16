@@ -26,4 +26,13 @@ SQLite3
  
     python3 init_db.py
     
+## Construir la imagen
+
+    docker build -t webapp .
+    docker run -it -d -p 80:80 --name=RPA webapp
+    
+## Usando la imagen del repositorio
+    
+    docker pull yoseanne/webapp:latest
+    docker run -it -d -p 80:80 --name=RPA yoseanne/webapp    
  
