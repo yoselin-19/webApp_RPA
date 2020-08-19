@@ -29,8 +29,13 @@
                     <p>Grupo:</p>
                     <h1>{{num[0]['grupo']}}</h1>
                 {%else%}
-                    <p></p>
-                    <h1></h1>
+                    {% if presiono %}
+                        <p>Grupo:</p>
+                        <h1>-1</h1>
+                    {% else %}
+                        <p></p>
+                        <h1></h1>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>

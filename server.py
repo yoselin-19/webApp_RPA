@@ -42,7 +42,7 @@ def consulta():
             num = conn.execute(cadena).fetchall()
             conn.commit()
             conn.close()
-            return render_template('consulta.html', num=num)
+            return render_template('consulta.html', num=num, presiono=True)
 
     return render_template('consulta.html')
 
