@@ -33,6 +33,6 @@ SQLite3
     
 ## Usando la imagen del repositorio
     
-    docker pull yoseanne/webapp:latest
+    docker pull yoseanne/webapp:[tag]
     docker run -it -d -p 80:80 --name=RPA yoseanne/webapp    
  

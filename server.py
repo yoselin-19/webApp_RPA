@@ -93,6 +93,17 @@ def grupo():
 
     return render_template('grupo.html')
 
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+    if request.method == "POST":
+        cadena = "DELETE FROM student"
+        conn = get_db_connection()
+        conn.execute(cadena)
+        conn.commit()
+        conn.close()
+        return redirect(url_for('index'))
+
+    return render_template('delete.html')
 
 # @app.route('/grupo/int:<group_id>')
 # def getgrupo(group_id):
