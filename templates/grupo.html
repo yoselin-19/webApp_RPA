@@ -21,11 +21,14 @@
       </form>
       <div id="resultado_grupo">
         {% if datos %}
-          <div>
+          <table class="table">
           {% for dat in datos %}
-            {{dat['carne']}}&nbsp&nbsp&nbsp&nbsp&nbsp{{dat['correo']}}
+          <tr>
+            <td>{{dat['carne']}}</td>
+            <td>{{dat['correo']}}</td>
+          </tr>
           {% endfor %}
-          </div>
+          </table>
         {% endif %}
       </div>
     </div>
